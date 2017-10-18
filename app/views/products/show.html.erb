@@ -2,6 +2,9 @@
 <%= link_to 'Back to Products', products_path %> <br />
 
 <h3>Reviews</h3>
+
+<%= render 'reviews/forms_reviews', review: @new_review, product_id: @product.id %>
+
 <% @reviews.each do |review| %>
 <p><%= review.name %> at <%= review.created_at %>:</p>
 <p><%= review.content %></p> <%= link_to('edit comment', edit_review_path(review)) %>

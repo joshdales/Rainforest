@@ -1,1 +1,3 @@
 <%= render 'forms_reviews', review: @review, product_id: @review.product_id  %>
+
+<%= link_to 'Delete', review_path(@review), method: :delete, data: {confirm: "Are you sure about this?"} %>

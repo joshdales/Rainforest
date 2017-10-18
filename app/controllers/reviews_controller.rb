@@ -32,7 +32,7 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = review.find(params[:id])
+    @review = Review.find(params[:id])
     @product = @review.product
 
     @review.destroy

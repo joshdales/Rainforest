@@ -1,13 +1,11 @@
 <%= form_for review do |f| %>
 
 <p>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, placeholder: "Name" %>
 </p>
 
 <p>
-  <%= f.label :content %>
-  <%= f.text_area :content %>
+  <%= f.text_area :content, placeholder: "Comment" %>
 </p>
 
 <%= f.hidden_field :product_id, :value => product_id%>

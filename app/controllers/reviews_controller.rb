@@ -23,8 +23,6 @@ class ReviewsController < ApplicationController
   def update
     @review = Review.find(params[:id])
     @product = @review.product
-    
-
 
     if @review.update(review_params)
       redirect_to products_path(@product)

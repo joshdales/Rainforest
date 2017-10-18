@@ -21,9 +21,9 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to products_path
+      redirect_to products_path, notice: "This product is created"
     else
-      redirect_to new_product_path
+      redirect_to new_product_path, alert: "Errors have occured"
     end
   end
 
@@ -34,15 +34,16 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
-      redirect_to @product
+      redirect_to @product, notice: "Product updated"
     else
-      redirect_back_or_to @product
+      redirect_back_or_to @product, alert: "Errors have occured"
     end
   end
 
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to products_path
+    redirect_to products_path, alert: "Product Deleted"
   end
+
 end

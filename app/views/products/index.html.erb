@@ -1,5 +1,4 @@
 <h1>Products</h1>
-<%= link_to('New Product', 'products/new') %>
 
 <% @products.each do |new_product| %>
 <%= render 'display_products', product: new_product %>

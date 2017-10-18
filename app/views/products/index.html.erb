@@ -4,4 +4,5 @@
 <% @products.each do |new_product| %>
 <%= render 'display_products', product: new_product %>
 <%= link_to('See product', product_path(new_product)) %>
+<hr>
 <% end %>

@@ -19,3 +19,17 @@ products = Product.create([
   {name: "There will be blood",
   price_in_cents: 399,
   description: "Oil? Milkshakes?"}])
+
+  reviews = Review.create([
+      { name: 'Jerry',
+      product_id: 1,
+      content: "Lightsabers!" },
+      { name: 'Jamie',
+      product_id: 2,
+      content: "Gasping emoji." },
+      {name: 'Unknown',
+      product_id: 3,
+      content: "I take life one mile at a time."},
+      {name: "Something Ominous",
+      product_id: 4,
+      content: "Oil? Milkshakes?"}])

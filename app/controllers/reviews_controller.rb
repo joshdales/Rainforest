@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
     if @review.update(review_params)
       redirect_to product_path(@product), notice: "Review updated"
     else
-      redirect_back_or_to product_review_path(@review.id), alert: "Errors have occured"
+      redirect_to product_path(@product), alert: "Errors have occured"
     end
   end
 

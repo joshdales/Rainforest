@@ -1,9 +1,11 @@
-<% if product.errors.any? %>
-<ul>
-  <% product.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
-  <% end %>
-</ul>
+<% if @product.errors.any? %>
+  <div class="error_explanation">
+    <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
 
 

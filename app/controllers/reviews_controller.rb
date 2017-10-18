@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to product_path(@product), notice: "Review created"
     else
-      redirect_to products_path, alert: "Errors have occured"
+      render 'products/show', alert: "Errors have occured"
     end
   end
 
@@ -26,7 +26,7 @@ class ReviewsController < ApplicationController
     if @review.update(review_params)
       redirect_to product_path(@product), notice: "Review updated"
     else
-      redirect_to product_path(@product), alert: "Errors have occured"
+      render :edit, alert: "Errors have occured"
     end
   end
 

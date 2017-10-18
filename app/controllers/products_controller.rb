@@ -5,8 +5,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @new_review = Review.new
-    @reviews = Product.find(params[:id]).reviews
+    @review = Review.new
   end
 
   def product_params
@@ -23,7 +22,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to products_path, notice: "This product is created"
     else
-      redirect_to new_product_path, alert: "Errors have occured"
+      render :new, alert: "Errors have occured"
     end
   end
 
@@ -36,7 +35,7 @@ class ProductsController < ApplicationController
     if @product.update(product_params)
       redirect_to @product, notice: "Product updated"
     else
-      redirect_to edit_product_path(@product), alert: "Errors have occured"
+      render :edit, alert: "Errors have occured"
     end
   end
 

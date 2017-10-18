@@ -24,9 +24,9 @@ class ReviewsController < ApplicationController
     @product = @review.product
 
     if @review.update(review_params)
-      redirect_to products_path(@product)
+      redirect_to product_path(@product)
     else
-      redirect_back_or_to @review
+      redirect_back_or_to product_review_path(@review.id)
     end
   end
 

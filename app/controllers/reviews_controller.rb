@@ -8,7 +8,6 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @product = @review.product
 
-
     if @review.save
       redirect_to product_path(@product)
     else

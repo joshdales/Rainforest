@@ -36,7 +36,7 @@ class ProductsController < ApplicationController
     if @product.update(product_params)
       redirect_to @product, notice: "Product updated"
     else
-      redirect_to product_path(@product), alert: "Errors have occured"
+      redirect_to edit_product_path(@product), alert: "Errors have occured"
     end
   end
 

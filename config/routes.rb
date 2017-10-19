@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
-  resource :user, only: [:new, :create]
+  resource :users, only: [:new, :create]
 
 end

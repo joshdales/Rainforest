@@ -9,7 +9,7 @@ class ReviewsController < ApplicationController
     @product = @review.product
 
     if @review.save
-      redirect_to product_path(@product), notice: "Review created"
+      redirect_to product_url(@product), notice: "Review created"
     else
       render 'products/show', alert: "Errors have occured"
     end
@@ -24,7 +24,7 @@ class ReviewsController < ApplicationController
     @product = @review.product
 
     if @review.update(review_params)
-      redirect_to product_path(@product), notice: "Review updated"
+      redirect_to product_url(@product), notice: "Review updated"
     else
       render :edit, alert: "Errors have occured"
     end
@@ -35,7 +35,7 @@ class ReviewsController < ApplicationController
     @product = @review.product
 
     @review.destroy
-    redirect_to product_path(@product), alert: "This review was destroyed!"
+    redirect_to product_url(@product), alert: "This review was destroyed!"
   end
 
 end

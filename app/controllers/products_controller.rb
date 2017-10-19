@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to products_path, notice: "This product is created"
+      redirect_to products_url, notice: "This product is created"
     else
       render :new, alert: "Errors have occured"
     end
@@ -42,7 +42,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to products_path, alert: "Product Deleted"
+    redirect_to products_url, alert: "Product Deleted"
   end
 
 end

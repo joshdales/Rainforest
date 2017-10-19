@@ -5,14 +5,14 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
-      session[:id_id] = user.id
+      session[:user_id] = user.id
       redirect_to root_url, notice: "Logged in!"
     else
       render :new
     end
   end
 
-  def destory
+  def destroy
     session[:user_id] = nil
     redirect_to root_url, notice: "Logged out!"
   end

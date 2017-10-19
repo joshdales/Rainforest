@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   end
 
   resource :users, only: [:new, :create]
+  resource :sessions, only: [:new, :create, :destroy]
 
 end

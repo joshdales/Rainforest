@@ -4,7 +4,6 @@ class ReviewsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
     @review = Review.new
-    @review.name = current_user.name
     @review.content = params[:review][:content]
     @review.user = current_user
     @review.product = @product
@@ -27,7 +26,7 @@ class ReviewsController < ApplicationController
     @product = @review.product
 
     if @review.save
-      redirect_to product_url(@product.id), notice: "Review updated"
+      redirect_to product_url(@product), notice: "Review updated"
     else
       render :edit, alert: "Errors have occured"
     end

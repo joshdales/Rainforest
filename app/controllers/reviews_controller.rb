@@ -1,11 +1,11 @@
 class ReviewsController < ApplicationController
 
-  def review_params
-    params.require(:review).permit(:name, :content, :product_id)
-  end
-
   def create
-    @review = Review.new(review_params)
+    @review = Review.new
+    @review.name = params[:review][:name]
+    @review.content = params[:review][:content]
+    @review.product_id = params[:review][:product_id]
+
     @product = @review.product
 
     if @review.save
@@ -21,9 +21,12 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.find(params[:id])
+    @review.name = params[:review][:name]
+    @review.content = params[:review][:content]
+
     @product = @review.product
 
-    if @review.update(review_params)
+    if @review.save
       redirect_to product_url(@product), notice: "Review updated"
     else
       render :edit, alert: "Errors have occured"

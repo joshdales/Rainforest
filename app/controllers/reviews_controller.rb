@@ -3,7 +3,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new
-    @review.name = params[:review][:name]
+    @review.name = current_user.name
     @review.content = params[:review][:content]
     @review.product_id = params[:review][:product_id]
 
@@ -22,7 +22,6 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.find(params[:id])
-    @review.name = params[:review][:name]
     @review.content = params[:review][:content]
 
     @product = @review.product

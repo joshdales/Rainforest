@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  before_action :ensure_logged_in, except: [:index, :show]
+  
   def index
     @products = Product.all
   end
@@ -6,10 +8,6 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @review = Review.new
-  end
-
-  def product_params
-    params.require(:product).permit(:name, :description, :price_in_cents)
   end
 
   def new

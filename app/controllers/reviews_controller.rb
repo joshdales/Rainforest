@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :ensure_logged_in
 
   def create
     @review = Review.new
@@ -11,7 +12,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to product_url(@product), notice: "Review created"
     else
-      render 'products/show', alert: "Errors have occured"
+      render product_url(@product), alert: "Errors have occured"
     end
   end
 

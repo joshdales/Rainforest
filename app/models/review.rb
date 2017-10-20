@@ -8,4 +8,5 @@ class Review < ApplicationRecord
   end
 
   belongs_to :product
+  belongs_to :user
 end

@@ -2,17 +2,17 @@ class ReviewsController < ApplicationController
   before_action :ensure_logged_in
 
   def create
+    @product = Product.find(params[:product_id])
     @review = Review.new
     @review.name = current_user.name
     @review.content = params[:review][:content]
-    @review.product_id = params[:review][:product_id]
-
-    @product = @review.product
+    @review.user = current_user
+    @review.product = @product
 
     if @review.save
       redirect_to product_url(@product), notice: "Review created"
     else
-      render product_url(@product), alert: "Errors have occured"
+      redirect_to product_url(@product), alert: "Errors have occured"
     end
   end
 
@@ -27,7 +27,7 @@ class ReviewsController < ApplicationController
     @product = @review.product
 
     if @review.save
-      redirect_to product_url(@product), notice: "Review updated"
+      redirect_to product_url(@product.id), notice: "Review updated"
     else
       render :edit, alert: "Errors have occured"
     end
@@ -38,7 +38,7 @@ class ReviewsController < ApplicationController
     @product = @review.product
 
     @review.destroy
-    redirect_to product_url(@product), alert: "This review was destroyed!"
+    redirect_to product_url(@product.id), alert: "This review was destroyed!"
   end
 
 end

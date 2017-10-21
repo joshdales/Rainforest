@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :ensure_logged_in
+  before_action :ensure_review_owner, except: [:create]
 
   def create
     @product        = Product.find(params[:product_id])
@@ -39,5 +40,4 @@ class ReviewsController < ApplicationController
     @review.destroy
     redirect_to product_url(@product.id), alert: "This review was destroyed!"
   end
-
 end

@@ -46,10 +46,11 @@ nav {
     position: absolute;
     right: 2rem;
     li {
-      padding-right: 2rem;
-      display: inline;
+      padding-right: 1rem;
+      display: inline-block;
       float: right;
       list-style: none;
+      line-height: 3rem;
       a {
         text-decoration: none;
       }

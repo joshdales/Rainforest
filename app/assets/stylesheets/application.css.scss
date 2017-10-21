@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
  // Boilerplate
+@import "variables";
 @import "mixins";
 
  *,
@@ -29,7 +31,7 @@
  }
 
  body {
-   margin-top: 7rem;
+   margin-top: 8rem;
  }
 
  // Layout
@@ -65,14 +67,17 @@ nav {
     top: 0;
     right: 2rem;
     li {
-      padding-right: 1rem;
+      padding: 0 1rem;
       display: inline-block;
       float: right;
       list-style: none;
       a {
+        color: black;
         text-decoration: none;
+      }
+      a:hover{
+        border-bottom: 0.2rem solid $highlight;
       }
     }
   }
-
 }

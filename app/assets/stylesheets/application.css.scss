@@ -14,7 +14,7 @@
  *= require_self
  */
 
- // Boilerplate
+// Boilerplate //
 @import "variables";
 @import "mixins";
 
@@ -30,17 +30,17 @@
   padding: 0;
  }
 
+ html {
+   font-family: 'Roboto', sans-serif;
+   font-size: 62.5%;
+   line-height: 1.5;
+ }
+
  body {
    margin-top: 8rem;
  }
 
- // Layout
- html {
-  font-family: 'Roboto', sans-serif;
-  font-size: 62.5%;
-  line-height: 1.5;
- }
-
+// HEADER //
 header {
    position: fixed;
    background: white;
@@ -80,4 +80,22 @@ nav {
       }
     }
   }
+}
+
+// Flash //
+.notice, .alert {
+  margin-top: -10rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.alert {
+  border: 0.1rem solid #c12f2f;
+  background: rgba(#c12f2f, 0.67);
+}
+
+.notice {
+  border: 0.1rem solid #322fc1;
+  background: rgba(#322fc1, 0.67);
 }

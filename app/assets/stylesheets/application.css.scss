@@ -28,11 +28,23 @@
   padding: 0;
  }
 
+ body {
+   margin-top: 5rem;
+ }
+
  // Layout
  html {
   font-family: 'Roboto', sans-serif;
   font-size: 62.5%;
   line-height: 1.5;
+ }
+
+header {
+   position: fixed;
+   background: white;
+   top: 0;
+   left: 0;
+   right: 0;
  }
 
 nav {

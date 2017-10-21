@@ -2,8 +2,8 @@ class ReviewsController < ApplicationController
   before_action :ensure_logged_in
 
   def create
-    @product = Product.find(params[:product_id])
-    @review = Review.new
+    @product        = Product.find(params[:product_id])
+    @review         = Review.new
     @review.content = params[:review][:content]
     @review.user = current_user
     @review.product = @product

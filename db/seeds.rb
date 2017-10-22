@@ -30,14 +30,22 @@ products = Product.create([
 
 reviews = Review.create([
   { user_id: 1,
-  product_id: 1,
-  content: "Lightsabers!" },
+    product_id: 1,
+    content: "Lightsabers!",
+    rating: 5},
   { user_id: 2,
-  product_id: 2,
-  content: "So good" },
-  {user_id: 2,
-  product_id: 3,
-  content: "I take life one mile at a time."},
-  {user_id: 1,
-  product_id: 4,
-  content: "Oil? Milkshakes?"}])
+    product_id: 2,
+    rating: 2,
+    content: "So good" },
+  { user_id: 2,
+    product_id: 3,
+    rating: 2,
+    content: "I take life one mile at a time."},
+  { user_id: 1,
+    product_id: 4,
+    rating: 3,
+    content: "Oil?"}
+  { user_id: 1,
+    product_id: 4,
+    rating: 4,
+    content: "Oil?"}])

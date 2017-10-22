@@ -8,17 +8,25 @@
 
 products = Product.create([
   { name: 'Star Wars',
-  price_in_cents: 299,
-  description: "In the stars" },
+    description: "In the stars",
+    image_url: "http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2017/05/1-star-wars-poster.jpg",
+    price_in_cents: 299,}
   { name: 'Lord of the Rings',
-  price_in_cents: 299,
-  description: "Some guys go to a volcano to destroy some other guy's ring." },
-  {name: 'Fast and Furious',
-  price_in_cents: 299,
-  description: "Fast cars. Faster characters."},
-  {name: "There will be blood",
-  price_in_cents: 399,
-  description: "Oil? Milkshakes?"}])
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut ligula dui. Maecenas in sapien cursus, condimentum nulla vitae, pellentesque metus. Sed accumsan tellus et molestie volutpat. Maecenas feugiat, mi.",
+    image_url: "https://www.movieartarena.com/imgs/lotr1final.jpg",
+    price_in_cents: 299,}
+  { name: 'Fast and Furious',
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut ligula dui. Maecenas in sapien cursus, condimentum nulla vitae, pellentesque metus. Sed accumsan tellus et molestie volutpat. Maecenas feugiat, mi.",
+    image_url:
+    price_in_cents: 299,}
+  { name: 'The Departed',
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut ligula dui. Maecenas in sapien cursus, condimentum nulla vitae, pellentesque metus. Sed accumsan tellus et molestie volutpat. Maecenas feugiat, mi.",
+    image_url: "https://ca.movieposter.com/posters/archive/main/167/MPW-83566",
+    price_in_cents: 299,}
+  { name: "There Will Be Blood",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut ligula dui. Maecenas in sapien cursus, condimentum nulla vitae, pellentesque metus. Sed accumsan tellus et molestie volutpat. Maecenas feugiat, mi.",
+    image_url: "https://img00.deviantart.net/03ae/i/2012/342/5/7/there_will_be_blood_poster_final_by_the_amazing_bob-d5ne1hb.jpg"
+    price_in_cents: 399,}])
 
 reviews = Review.create([
   { user_id: 1,
@@ -26,7 +34,7 @@ reviews = Review.create([
   content: "Lightsabers!" },
   { user_id: 2,
   product_id: 2,
-  content: "Gasping emoji." },
+  content: "So good" },
   {user_id: 2,
   product_id: 3,
   content: "I take life one mile at a time."},

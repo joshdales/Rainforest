@@ -1,7 +1,7 @@
 class ImagesOnFilms < ActiveRecord::Migration[5.1]
   def change
     drop_table :products
-    
+
     create_table :products do |t|
       t.string   "name"
       t.text     "description"
@@ -10,5 +10,7 @@ class ImagesOnFilms < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+
+    add_column :reviews, rating:, :integer
   end
 end

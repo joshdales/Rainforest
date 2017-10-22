@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_url, notice: "Logged in!"
     else
-      render :new, alert: @user.errors.full_messages
+      render :new, alert: "Your Username or Password is incorrect"
     end
   end
 

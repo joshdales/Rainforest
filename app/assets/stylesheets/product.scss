@@ -1,24 +1,51 @@
 // Place all the styles related to the Product controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
 h1 {
   font-size: 2.5rem;
 }
 
 .product {
+  position: relative;
   display: inline-block;
+  height: 20rem;
   width: 30%;
   margin: 1rem;
-  box-shadow: 1px 4px 4px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
   .product_name {
     font-size: 1.8rem;
-    margin: 0.5rem;
+    margin: 0.5rem 0;
+    padding: 0 1rem;
   }
   .product_price {
     font-size: 1.4rem;
+    padding: 0 2rem;
+  }
+  .product_description {
+    font-size: 1.5rem;
+    padding: 0 1rem;
   }
   a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 1.3rem;
     display: block;
     text-align: center;
+    text-decoration: none;
+    color: black;
+  }
+  a:hover {
+    background-color: $highlight;
+    color: white;
+  }
+}
+
+@media ( min-width: 960px ) {
+  .product{
+    width: 18%;
   }
 }

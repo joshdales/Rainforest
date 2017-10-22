@@ -11,10 +11,10 @@ h1 {
   display: inline-block;
   width: 45%;
   margin: 1rem;
-  z-index: 10;
   box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
   .product_name {
     font-size: 1.8rem;
+    line-height: 2;
     margin: 0.5rem 0;
     padding: 0 1rem;
     background-color: $highlight;
@@ -36,6 +36,11 @@ h1 {
   .poster:hover {
     filter: grayscale(0);
   }
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-size: 2rem;
 }
 
 .poster {

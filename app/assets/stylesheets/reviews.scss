@@ -1,3 +1,35 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.reviews {
+  display: inline-block;
+  color: white;
+  margin: 1rem;
+  padding: 1rem;
+  box-shadow: 1px 5px 8px 1px rgba(0, 0, 0, 0.2);
+  p {
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+  a {
+    text-decoration: none;
+    color: lightgrey;
+  }
+}
+
+.review1 {
+  background-color: #91c1c9;
+}
+.review2 {
+background-color: #70c4d4;
+}
+.review3 {
+background-color: #2e99ac;
+}
+.review4 {
+background-color: #126878;
+}
+.review5 {
+  background-color: #064854;
+}

@@ -40,7 +40,7 @@
    margin-top: 8rem;
  }
 
-// HEADER //
+// Header //
 header {
    position: fixed;
    background: white;
@@ -98,4 +98,9 @@ nav {
 .notice {
   border: 0.1rem solid #322fc1;
   background: rgba(#322fc1, 0.67);
+}
+
+// Main //
+main {
+  margin: 0 1.5rem;
 }

@@ -2,7 +2,7 @@
 <%= render 'products/display_products', product: @product %><br/>
 <%= link_to 'Edit', edit_product_path(@product) %> | <%= link_to 'Delete', product_path(@product), method: :delete, data: {confirm: "Are you sure about this?"} %>
 
-<h3>Reviews</h3>
+<h2>Reviews</h2>
 
 <%= render 'reviews/form', product: @product, review: @review, product_id: @product.id %>
 

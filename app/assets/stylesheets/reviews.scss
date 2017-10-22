@@ -20,6 +20,11 @@
   }
 }
 
+textarea#review_content,
+select#review_rating {
+  font-size: 1.5rem;
+}
+
 .review1 {
   background-color: $onestar;
 }

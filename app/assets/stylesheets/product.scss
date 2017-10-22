@@ -42,13 +42,17 @@ h2 {
   }
 }
 
+.poster {
+  max-width: 50rem;
+}
+
+.new_review {
+  font-size: 1.5rem;
+}
+
 .material-icons {
   font-family: "Material Icons";
   font-size: 2rem;
-}
-
-.poster {
-  max-width: 50rem;
 }
 
 @media ( min-width: 1024px ) {

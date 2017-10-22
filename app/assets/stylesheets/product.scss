@@ -8,10 +8,8 @@ h1 {
 }
 
 .product {
-  position: relative;
   display: inline-block;
-  height: 20rem;
-  width: 30%;
+  width: 45%;
   margin: 1rem;
   z-index: 10;
   box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.2);
@@ -28,25 +26,18 @@ h1 {
     font-size: 1.5rem;
     padding: 0 1rem;
   }
-  a {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 1.3rem;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: black;
+  .poster {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100);
   }
-  a:hover {
-    background-color: $highlight;
-    color: white;
+  .poster:hover {
+    filter: grayscale(0);
   }
 }
 
-@media ( min-width: 960px ) {
+@media ( min-width: 1024px ) {
   .product{
-    width: 18%;
+    width: 30%;
   }
 }

@@ -3,6 +3,5 @@
 <% @products.each do |new_product| %>
 <div class="product">
 <%= render 'display_products', product: new_product %>
-<%= link_to('See product', product_path(new_product)) %>
 </div>
 <% end %>

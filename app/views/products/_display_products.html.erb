@@ -1,3 +1,5 @@
+<% if params[:action] != "show" %>
 <h3 class="product_name"><%= product.name %></h3>
+<% end %>
 <p class="product_price"><%= product.price_in_dollars %></p>
 <p class="product_description"><%= product.description %></p>

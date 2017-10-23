@@ -18,6 +18,9 @@
     font-size: 1.4rem;
     color: lightgrey;
   }
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 textarea#review_content,

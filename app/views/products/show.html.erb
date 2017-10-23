@@ -6,14 +6,18 @@
 
 <%= render 'reviews/form', product: @product, review: @review, product_id: @product.id %>
 
+<div class="all_reviews">
 <% @product.reviews.newest_first.each do |review| %>
   <div class="reviews review<%= review.rating %>">
     <p><%= review.user.name %> at <%= review.updated_at %>:</p>
     <p><%= review.content %></p>
     <p><% review.rating.times do %><i class="material-icons">grade</i><% end %> </p>
       <% if current_user == review.user %>
+      <p>
         <%= link_to 'Edit', edit_product_review_path(review.product, review) %> |
         <%= link_to 'Delete', product_review_path(@product.id, review.id), method: :delete, data: {confirm: "Are you sure about this?"} %>
       <% end %>
+    </p>
   </div>
 <% end %>
+</div>

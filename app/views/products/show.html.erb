@@ -6,7 +6,7 @@
 
 <%= render 'reviews/form', product: @product, review: @review, product_id: @product.id %>
 
-<% @product.reviews.each do |review| %>
+<% @product.reviews.newest_first.each do |review| %>
   <div class="reviews review<%= review.rating %>">
     <p><%= review.user.name %> at <%= review.created_at %>:</p>
     <p><%= review.content %></p>

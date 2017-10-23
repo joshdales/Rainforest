@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :ensure_logged_in, except: [:index, :show]
-  
+
   def index
     @products = Product.all
   end
@@ -34,8 +34,8 @@ class ProductsController < ApplicationController
 
   def update
     @product = Product.find(params[:id])
-    if @product.update(product_params)
-      redirect_to @product, notice: "Product updated"
+    if @product.save
+      redirect_to product_url(@product), notice: "Product updated"
     else
       render :edit, alert: "Errors have occured"
     end

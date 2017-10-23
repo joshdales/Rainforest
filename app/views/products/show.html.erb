@@ -8,7 +8,7 @@
 
 <% @product.reviews.newest_first.each do |review| %>
   <div class="reviews review<%= review.rating %>">
-    <p><%= review.user.name %> at <%= review.created_at %>:</p>
+    <p><%= review.user.name %> at <%= review.updated_at %>:</p>
     <p><%= review.content %></p>
     <p><% review.rating.times do %><i class="material-icons">grade</i><% end %> </p>
       <% if current_user == review.user %>

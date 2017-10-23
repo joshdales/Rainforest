@@ -1,5 +1,12 @@
 class Product < ApplicationRecord
   validates :name, :description, :price_in_cents, presence: true
+  validate :url_starts_with_http
+
+  def url_starts_with_http
+    return unless url.present?
+    url.starts_with?("http")
+    errors.add(:url, "must start with http") if not url.starts_with?("http")
+  end
 
   has_many :reviews
 

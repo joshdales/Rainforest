@@ -110,3 +110,19 @@ nav {
 main {
   padding: 0 1.5rem;
 }
+
+
+// Footer //
+footer {
+  background-color: $highlight;
+  color: white;
+  text-align: center;
+  h4 {
+    margin-bottom: 0;
+    font-size: 2rem;
+    line-height: 2;
+  }
+  img {
+    margin: 0 1rem;
+  }
+}
